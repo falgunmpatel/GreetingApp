@@ -34,4 +34,9 @@ public class UserController {
     public AuthUserDTO forgetPassword(@RequestBody PassDTO pass, @PathVariable String email){
         return iAuthInterface.forgetPassword(pass, email);
     }
+
+    @PutMapping("/resetPassword/{email}")
+    public String resetPassword(@PathVariable String email ,@RequestParam String currentPass, @RequestParam String newPass){
+        return iAuthInterface.resetPassword(email, currentPass, newPass);
+    }
 }
