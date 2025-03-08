@@ -24,12 +24,7 @@ public class AuthUserDTO {
     public AuthUserDTO() {
     }
 
-    public AuthUserDTO(String firstName, String lastName, String email, String password) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-        this.id = null;
+    public AuthUserDTO(String firstName, String lastName, String email, String password, Long id) {
     }
 
     public void setFirstName(String firstName) {
@@ -67,6 +62,4 @@ public class AuthUserDTO {
     public Long getId() {
         return id;
     }
-
-
 }
